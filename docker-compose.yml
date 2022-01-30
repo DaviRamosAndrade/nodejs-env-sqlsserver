@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  sqlserver:
+    image: sqlserver
+    build: 
+      context: .
+      dockerfile: ./Dockerfile
+    container_name: SQLServer
+    user: root
+    ports: 
+      - 1433:1433 
+    volumes:
+      - ./data:/var/opt/mssql/data
+      - ./log:/var/opt/mssql/log
