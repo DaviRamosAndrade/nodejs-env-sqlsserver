@@ -1,0 +1,11 @@
+<nav>
+    <div>
+        <ul>
+        <% if(auth.isAuthenticated){ %>
+            <li class="waves-effect waves-light btn"><a href="/logout">Logout</a></li>
+        <% } else {%>
+            <li class="waves-effect waves-light btn"><a href="/login">Login</a></li>
+        <% } %>
+        </ul>
+    </div>
+</nav>
